@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 // }
 // const connected : connectionObject = {}
 
-const dbConnect = async () : Promise<void> => {
+export const dbConnect = async () : Promise<void> => {
     if(mongoose.connection.readyState >= 1) {
         console.log("Already Connected")
         return

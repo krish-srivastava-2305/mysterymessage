@@ -48,7 +48,10 @@ const userSchema: Schema<user> = new Schema({
     },
     verifyCode: String,
     verifyCodeExpiry: Date,
-    isVerified: Boolean,
+    isVerified: {
+        type: Boolean,
+        default: false,
+    },
     isAcceptingMessage:{
         type:Boolean,
         default: true
